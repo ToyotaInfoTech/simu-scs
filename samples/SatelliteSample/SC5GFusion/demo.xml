@@ -1,0 +1,7 @@
+<!-- 
+ Copyright (C) 2023 TOYOTA MOTOR CORPORATION. ALL RIGHTS RESERVED.
+-->
+<config>
+    <interface hosts="*" address="10.x.x.x" netmask="255.x.x.x"/>
+    <autoroute metric='propagationDelay'/>
+</config>

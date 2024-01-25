@@ -1,0 +1,10 @@
+diff -upr -U0 -b original/globals.h patched/globals.h
+--- original/globals.h
++++ patched/globals.h
+@@ -27 +27,2 @@ const double TWOTHRD      = 2.0 / 3.0;
+-const double XKMPER_WGS72 = 6378.135;     // Earth equatorial radius - km (WGS '72)
++//const double XKMPER_WGS72 = 6378.135;     // Earth equatorial radius - km (WGS '72)
++const double XKMPER_WGS72 = 6378.137764899274;  // Earth equatorial radius - km (WGS '84)
+@@ -45 +46 @@ const double XKE          = std::sqrt(3600.0 * GE /   
+-const double QOMS2T       = std::pow((QO - S), 4);            //(QO - S)^4 ER^4
++const double QOMS2T       = std::pow((QO - (AE + 78.0  / XKMPER_WGS72)), 4);            //(QO - S)^4 ER^4

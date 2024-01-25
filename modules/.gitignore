@@ -1,0 +1,12 @@
+*.so
+*.o
+*.o.d
+.last-copts
+language.settings.xml
+Makefile
+*_dbg
+.settings
+Makefile
+out/
+*.dylib
+*.a

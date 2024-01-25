@@ -1,0 +1,187 @@
+diff -upr -U0 -b original/libnorad/cEcef.cc patched/libnorad/cEcef.cc
+--- original/libnorad/cEcef.cc
++++ patched/libnorad/cEcef.cc
+@@ -2,2 +2,2 @@
+-#include "libnorad/globals.h"
+-#include "libnorad/ccoord.h"
++#include "os3/libnorad/globals.h"
++#include "os3/libnorad/ccoord.h"
+@@ -15,0 +16,2 @@ cEcef::cEcef() {
++
++#define SEMI_MAJOR_AXIS 6378.135
+diff -upr -U0 -b original/libnorad/cEcef.h patched/libnorad/cEcef.h
+--- original/libnorad/cEcef.h
++++ patched/libnorad/cEcef.h
+@@ -4 +4 @@
+-#include "libnorad/ccoord.h"
++#include "os3/libnorad/ccoord.h"
+diff -upr -U0 -b original/libnorad/cNoradBaseA.cc patched/libnorad/cNoradBaseA.cc
+--- original/libnorad/cNoradBaseA.cc
++++ patched/libnorad/cNoradBaseA.cc
+@@ -33,4 +33,4 @@
+-#include "libnorad/ccoord.h"
+-#include "libnorad/cEci.h"
+-#include "libnorad/cVector.h"
+-#include "libnorad/cJulian.h"
++#include "os3/libnorad/ccoord.h"
++#include "os3/libnorad/cEci.h"
++#include "os3/libnorad/cVector.h"
++#include "os3/libnorad/cJulian.h"
+@@ -83 +83 @@ void cNoradBaseA::Initialize()
+-   m_s4      = SV;
++   m_s4      = S;
+diff -upr -U0 -b original/libnorad/cNoradSGP4A.cc patched/libnorad/cNoradSGP4A.cc
+--- original/libnorad/cNoradSGP4A.cc
++++ patched/libnorad/cNoradSGP4A.cc
+@@ -15,3 +15,3 @@
+-#include "libnorad/cJulian.h"
+-#include "libnorad/cVector.h"
+-#include "libnorad/ccoord.h"
++#include "os3/libnorad/cJulian.h"
++#include "os3/libnorad/cVector.h"
++#include "os3/libnorad/ccoord.h"
+diff -upr -U0 -b original/libnorad/cOrbitA.cc patched/libnorad/cOrbitA.cc
+--- original/libnorad/cOrbitA.cc
++++ patched/libnorad/cOrbitA.cc
+@@ -15,7 +15,7 @@
+-#include "libnorad/cVector.h"
+-#include "libnorad/cEci.h"
+-#include "libnorad/ccoord.h"
+-#include "libnorad/cJulian.h"
+-#include "libnorad/cNoradSGP4.h"
+-#include "libnorad/cNoradSDP4.h"
+-#include "cNoradSGP4A.h"
++#include "os3/libnorad/cVector.h"
++#include "os3/libnorad/cEci.h"
++#include "os3/libnorad/ccoord.h"
++#include "os3/libnorad/cJulian.h"
++#include "os3/libnorad/cNoradSGP4.h"
++#include "os3/libnorad/cNoradSDP4.h"
++#include "leosatellites/libnorad/cNoradSGP4A.h"
+diff -upr -U0 -b original/libnorad/cOrbitA.h patched/libnorad/cOrbitA.h
+--- original/libnorad/cOrbitA.h
++++ patched/libnorad/cOrbitA.h
+@@ -15,2 +15,2 @@
+-#include "libnorad/cTLE.h"
+-#include "libnorad/cJulian.h"
++#include "os3/libnorad/cTLE.h"
++#include "os3/libnorad/cJulian.h"
+@@ -58 +58 @@ class cOrbitA (public)
+-private:
++protected:
+diff -upr -U0 -b original/mobility/GroundStationMobility.cc patched/mobility/GroundStationMobility.cc
+--- original/mobility/GroundStationMobility.cc
++++ patched/mobility/GroundStationMobility.cc
+@@ -2 +2 @@
+-#include "../libnorad/cEcef.h"
++#include "leosatellites/libnorad/cEcef.h"
+diff -upr -U0 -b original/mobility/GroundStationMobility.h patched/mobility/GroundStationMobility.h
+--- original/mobility/GroundStationMobility.h
++++ patched/mobility/GroundStationMobility.h
+@@ -4 +4 @@
+-#include <mobility/LUTMotionMobility.h>    // os3
++#include "os3/mobility/LUTMotionMobility.h"   // os3
+diff -upr -U0 -b original/mobility/INorad.cc patched/mobility/INorad.cc
+--- original/mobility/INorad.cc
++++ patched/mobility/INorad.cc
+@@ -7 +7 @@
+-#include "libnorad/cTLE.h"
++#include "os3/libnorad/cTLE.h"
+@@ -9 +9 @@
+-#include "libnorad/cSite.h"
++#include "os3/libnorad/cSite.h"
+diff -upr -U0 -b original/mobility/INorad.h patched/mobility/INorad.h
+--- original/mobility/INorad.h
++++ patched/mobility/INorad.h
+@@ -24,3 +24,3 @@
+-#include "libnorad/cEci.h"
+-#include "libnorad/cJulian.h"
+-#include "libnorad/ccoord.h"
++#include "os3/libnorad/cEci.h"
++#include "os3/libnorad/cJulian.h"
++#include "os3/libnorad/ccoord.h"
+diff -upr -U0 -b original/mobility/NoradA.cc patched/mobility/NoradA.cc
+--- original/mobility/NoradA.cc
++++ patched/mobility/NoradA.cc
+@@ -7 +7 @@
+-#include "libnorad/cTLE.h"
++#include "os3/libnorad/cTLE.h"
+@@ -9 +9 @@
+-#include "libnorad/cSite.h"
++#include "os3/libnorad/cSite.h"
+diff -upr -U0 -b original/mobility/NoradA.h patched/mobility/NoradA.h
+--- original/mobility/NoradA.h
++++ patched/mobility/NoradA.h
+@@ -9,3 +9,3 @@
+-#include "libnorad/cEci.h"
+-#include "libnorad/cJulian.h"
+-#include "libnorad/ccoord.h"
++#include "os3/libnorad/cEci.h"
++#include "os3/libnorad/cJulian.h"
++#include "os3/libnorad/ccoord.h"
+@@ -50 +50 @@ class NoradA : public INorad (public)
+-private:
++protected:
+diff -upr -U0 -b original/mobility/SatelliteMobility.cc patched/mobility/SatelliteMobility.cc
+--- original/mobility/SatelliteMobility.cc
++++ patched/mobility/SatelliteMobility.cc
+@@ -2 +2 @@
+-#include "libnorad/cJulian.h"
++#include "os3/libnorad/cJulian.h"
+diff -upr -U0 -b original/networklayer/configurator/ipv4/SatelliteNetworkConfigurator.cc patched/networklayer/configurator/ipv4/SatelliteNetworkConfigurator.cc
+--- original/networklayer/configurator/ipv4/SatelliteNetworkConfigurator.cc
++++ patched/networklayer/configurator/ipv4/SatelliteNetworkConfigurator.cc
+@@ -22 +22 @@
+-#include "MatcherOS3.h"
++#include "leosatellites/networklayer/configurator/ipv4/MatcherOS3.h"
+@@ -32,6 +32,6 @@
+-#include "mobility/SatSGP4Mobility.h"
+-#include "mobility/LUTMotionMobility.h"
+-#include "../../../mobility/GroundStationMobility.h"
+-#include "../../../mobility/SatelliteMobility.h"
+-#include "../../../mobility/NoradA.h"
+-#include "../../../libnorad/cEcef.h"
++#include "os3/mobility/SatSGP4Mobility.h"
++#include "os3/mobility/LUTMotionMobility.h"
++#include "leosatellites/mobility/GroundStationMobility.h"
++#include "leosatellites/mobility/SatelliteMobility.h"
++#include "leosatellites/mobility/NoradA.h"
++#include "leosatellites/libnorad/cEcef.h"
+@@ -342,2 +342,2 @@ void SatelliteNetworkConfigurator::addStaticRoutes(Top
+-                        NoradA *sourceNoradModule = dynamic_cast<NoradA*>(sourceModule->getSubmodule("NoradModule", 0));
+-                        NoradA *destNoradModule = dynamic_cast<NoradA*>(destModule->getSubmodule("NoradModule", 0));
++                        NoradA *sourceNoradModule = dynamic_cast<NoradA*>(sourceModule->getSubmodule("NoradModule"));
++                        NoradA *destNoradModule = dynamic_cast<NoradA*>(destModule->getSubmodule("NoradModule"));
+@@ -370 +370 @@ void SatelliteNetworkConfigurator::addStaticRoutes(Top
+-                    NoradA *sourceNoradModule = dynamic_cast<NoradA*>(sourceModule->getSubmodule("NoradModule", 0));
++                    NoradA *sourceNoradModule = dynamic_cast<NoradA*>(sourceModule->getSubmodule("NoradModule"));
+diff -upr -U0 -b original/physicallayer/apskradio/SatelliteApskScalarTransmission.h patched/physicallayer/apskradio/SatelliteApskScalarTransmission.h
+--- original/physicallayer/apskradio/SatelliteApskScalarTransmission.h
++++ patched/physicallayer/apskradio/SatelliteApskScalarTransmission.h
+@@ -19 +19 @@
+-#include "libnorad/ccoord.h"
++#include "os3/libnorad/ccoord.h"
+diff -upr -U0 -b original/physicallayer/propagation/SatellitePropagation.cc patched/physicallayer/propagation/SatellitePropagation.cc
+--- original/physicallayer/propagation/SatellitePropagation.cc
++++ patched/physicallayer/propagation/SatellitePropagation.cc
+@@ -21,7 +21,7 @@
+-#include "mobility/SatSGP4Mobility.h"
+-#include "mobility/LUTMotionMobility.h"
+-#include "../../mobility/GroundStationMobility.h"
+-#include "../../mobility/SatelliteMobility.h"
+-#include "libnorad/ccoord.h"
+-#include "libnorad/cEci.h"
+-#include "../../libnorad/cEcef.h"
++#include "os3/mobility/SatSGP4Mobility.h"
++#include "os3/mobility/LUTMotionMobility.h"
++#include "leosatellites/mobility/GroundStationMobility.h"
++#include "leosatellites/mobility/SatelliteMobility.h"
++#include "os3/libnorad/ccoord.h"
++#include "os3/libnorad/cEci.h"
++#include "leosatellites/libnorad/cEcef.h"
+diff -upr -U0 -b original/physicallayer/unitdisk/SatelliteUnitDiskTransmission.h patched/physicallayer/unitdisk/SatelliteUnitDiskTransmission.h
+--- original/physicallayer/unitdisk/SatelliteUnitDiskTransmission.h
++++ patched/physicallayer/unitdisk/SatelliteUnitDiskTransmission.h
+@@ -19 +19 @@
+-#include "libnorad/ccoord.h"
++#include "os3/libnorad/ccoord.h"

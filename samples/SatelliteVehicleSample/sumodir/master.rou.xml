@@ -1,0 +1,8 @@
+<!-- 
+ Copyright (C) 2023 TOYOTA MOTOR CORPORATION. ALL RIGHTS RESERVED.
+-->
+<routes>
+
+<include href="r0.rou.xml"/>
+
+</routes>

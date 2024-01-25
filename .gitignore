@@ -1,0 +1,17 @@
+*.sca
+*.vec
+*.vci
+**/out
+external/leosatellites/src/leosatellites
+.qtenvrc
+demodump.xml
+*.so
+Makefile
+.vscode
+.settings
+*.dylib
+original/
+patched/
+modules/os3/src/os3/libnorad
+samples/images/os3
+.DS_Store

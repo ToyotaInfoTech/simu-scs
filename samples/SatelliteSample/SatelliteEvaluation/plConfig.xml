@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ Copyright (C) 2023 TOYOTA MOTOR CORPORATION. ALL RIGHTS RESERVED.
+-->
+<root>
+    <parameter>
+        <sigmaSf name="sf" type="double" value="2.7"/>
+        <CL name="CL" type="double" value="26.2"/>
+        <scintillation name="scintillation" type="double" value="0.6"/>
+        <atmospheric name="atmospheric" type="double" value="0.6"/>
+        <cluster name="cluster" type="double" value="0.0"/>
+        <shadow name="shadow" type="double" value="0.0"/>
+        <building name="building" type="double" value="0.0"/>
+        <fading name="fading" type="double" value="0.0"/>
+    </parameter>
+</root>

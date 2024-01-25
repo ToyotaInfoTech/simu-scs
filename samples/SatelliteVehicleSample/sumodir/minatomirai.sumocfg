@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2021-07-11 09:37:32 by Eclipse SUMO GUI Version 1.9.2
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="minatomirai.net.xml"/>
+        <route-files value="test1.rou.xml"/>
+        <additional-files value="minatomirai.poly.xml"/>		
+    </input>
+
+</configuration>

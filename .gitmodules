@@ -1,0 +1,15 @@
+[submodule "external/inet"]
+	path = external/inet
+	url = https://github.com/inet-framework/inet.git
+[submodule "external/veins"]
+	path = external/veins
+	url = https://github.com/sommer/veins.git
+[submodule "external/simu5G"]
+	path = external/simu5G
+	url = https://github.com/Unipisa/Simu5G.git
+[submodule "external/date"]
+	path = external/date
+	url = https://github.com/HowardHinnant/date.git
+[submodule "scs_optional"]
+	path = scs_optional
+	url = https://github.com/ToyotaInfoTech/simu-scs-optional.git

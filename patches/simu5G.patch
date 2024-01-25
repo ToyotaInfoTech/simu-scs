@@ -1,0 +1,5 @@
+--- original/.project
++++ patched/.project
+@@ -6 +6 @@
+-		<project>inet4.4</project>
++		<project>inet</project>

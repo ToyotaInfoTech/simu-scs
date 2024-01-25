@@ -1,0 +1,5 @@
+<config>
+   <interface hosts="*" address="10.0.0.x" netmask="255.255.255.x"/>
+   <interface hosts="satellite[0]" names="cnl*" address="10.0.0.x" netmask="255.255.255.0" metric="0"/>
+   <interface hosts="GS*" names="wlan0" address="10.0.0.x" netmask="255.255.255.0" metric="0"/>     
+</config>
